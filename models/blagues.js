@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const db = require('../db/database');
 
 const Blague = db.define(
-  'Blague',
+  'Blagues',
   {
     // Model attributes are defined here
     id: {
@@ -11,6 +11,10 @@ const Blague = db.define(
       primaryKey: true,
     },
     question: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    reponse: {
       type: DataTypes.STRING,
       allowNull: false
     },
