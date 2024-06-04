@@ -1,8 +1,8 @@
 const { DataTypes } = require('sequelize');
 const db = require('../db/database');
 
-const Student = db.define(
-  'Student',
+const Blague = db.define(
+  'Blague',
   {
     // Model attributes are defined here
     id: {
@@ -10,7 +10,7 @@ const Student = db.define(
       autoIncrement: true,
       primaryKey: true,
     },
-    name: {
+    question: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -18,4 +18,4 @@ const Student = db.define(
   },
 );
 
-module.exports = Student;
+module.exports = Blague;
